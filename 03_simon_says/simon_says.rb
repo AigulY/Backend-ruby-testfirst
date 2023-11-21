@@ -7,7 +7,7 @@ def shout(word)
     return word.upcase
 end
 
-def repeat(word, repeat=1)
+def repeat(word, repeat=2)
         word = "#{word} " * repeat
     return word.rstrip
 end
@@ -21,14 +21,14 @@ def first_word(sentence)
 end
 
 def titleize(words)
-    words.capitalize  # capitalize the first word if it is part of the no words array
+    words.capitalize! 
     little_words = ["and", "or", "the", "over", "to", "the", "a", "but"]
     sentence = words.split(" ").map do |word| 
         if little_words.include?(word) 
-            word #if word is in little_words array return the word
+            word 
         else
-            word.capitalize #if word is not in little_words array then capitalize word
+            word.capitalize
         end
     end.join(" ") 
-  sentence  # returns the phrase with all the excluded words
+  sentence 
 end

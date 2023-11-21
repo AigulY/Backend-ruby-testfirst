@@ -78,18 +78,19 @@ end
 # write tests and code for the following:
 
 describe "#multiply" do
-
   it "multiplies two numbers" do
-      expect(multiply(2, 3)).to eq(6)
-      expect(multiply(2, -3)).to eq(-6)
-      expect(multiply(-2, -3)).to eq(6)
-      expect(multiply(2, 0)).to eq(0)
+    expect(multiply(2, 3)).to eq(6)
+    expect(multiply(2, -3)).to eq(-6)
+    expect(multiply(-2, -3)).to eq(6)
+    expect(multiply(2, 0)).to eq(0)
+  end
+    
   it "multiplies several numbers" do
-      expect(multiply(2, 3, 4)).to eq(24)
-      expect(multiply(2, -3, -4)).to eq(24)
-      expect(multiply(-2, -3, -4)).to eq(-24)
-      expect(multiply(2, 0, 4)).to eq(0)
-  
+    expect(multiply(2, 3, 4)).to eq(24)
+    expect(multiply(2, -3, -4)).to eq(24)
+    expect(multiply(-2, -3, -4)).to eq(-24)
+    expect(multiply(2, 0, 4)).to eq(0)
+  end
 end
 
 describe "#power" do
@@ -111,7 +112,7 @@ describe "#factorial" do
       expect(factorial(2)).to eq(2)
     end
   it "computes the factorial of 5" do
-      expect(factorial(5)).to eq(`120`)
+      expect(factorial(5)).to eq(120)
     end
   it "computes the factorial of 10" do
       expect(factorial(10)).to eq(3628800)

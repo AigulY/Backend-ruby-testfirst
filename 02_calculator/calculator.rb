@@ -1,10 +1,10 @@
 #write your code here
 def add(a, b)
-    return a + b
+    a + b
 end
 
 def subtract(a, b)
-    return a - b
+    a - b
 end
 
 def sum(array)
@@ -15,18 +15,19 @@ def sum(array)
     return sum
 end
 
-def multiply(a, b)
-    return 0 if a == 0 || b == 0
-
-    return a * b
+def multiply(*numbers)
+    result = 1
+    numbers.each { |num| result *= num}
+    result
 end
 
 def power (a, b)
-    return 1 if b == 0
+    return a ** b
+end
 
-    result = a
-    (b - 1).times do 
-         sum *= a
-    end
-    return result
+def factorial(n)
+    return 1 if n == 0 || n == 1
+    result = 1
+    (2..n).each { |i| result *= i}
+    result
 end
