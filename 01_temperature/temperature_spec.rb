@@ -54,6 +54,8 @@ describe "temperature conversion functions" do
     end
 
     it "converts body temperature" do
+      #expecting the results to be appr 98.6
+      #due to imprecition of floating-point, be_within is used to allow the small range 0.1
       expect(ctof(37)).to be_within(0.1).of(98.6)
       # Why do we need to use be_within?
       # See http://www.ruby-forum.com/topic/169330
